@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Message 💌</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+font-family:Arial,sans-serif;
+overflow:hidden;
+text-align:center;
+}
+
+.envelope{
+font-size:120px;
+cursor:pointer;
+transition:0.5s;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+#message{
+display:none;
+background:rgba(255,255,255,0.2);
+padding:20px;
+border-radius:20px;
+width:85%;
+max-width:400px;
+color:white;
+margin-top:20px;
+backdrop-filter:blur(10px);
+}
+
+button{
+padding:12px 22px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4081;
+font-size:16px;
+margin-top:15px;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 style="color:white;">
+💌 A Secret Message Awaits 💌
+</h2>
+
+<div class="envelope" onclick="openLetter()">
+📩
+</div>
+
+<div id="message">
+
+<h2>💕 Dear Lossy🤍 💕</h2>
+
+<p style="line-height:1.8;">
+
+Happy Birthday 🎂✨
+
+Among all the people I've met,
+you became someone very special to me ❤️
+
+Your smile, your kindness and the way
+you make ordinary moments feel beautiful
+mean more to me than words can explain.
+
+Maybe I like you more than I can say... 😊💕
+
+No matter what happens,
+I always wish happiness and success for you ✨
+
+</p>
+
+<a href="page6.html">
+<button id="nextBtn">
+Final Surprise ➜
+</button>
+</a>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.querySelector(".envelope").innerHTML="💌";
+
+document.getElementById("message").style.display="block";
+
+document.getElementById("nextBtn").style.display="inline-block";
+
+}
+
+</script>
+
+</body>
+</html>

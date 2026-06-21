@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Lossy🤍</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ffb199);
+font-family:Arial,sans-serif;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+color:white;
+width:85%;
+max-width:420px;
+z-index:2;
+}
+
+h1{
+font-size:38px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{opacity:.6;}
+to{opacity:1;}
+}
+
+.heart,.confetti{
+position:absolute;
+font-size:30px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+.date{
+font-size:20px;
+margin:15px 0;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>Lossy🤍</h2>
+
+<div class="date">
+22 / 06 / 2008 ❤️
+</div>
+
+<p style="line-height:1.8;">
+
+May your life always be filled with
+happiness, success, peace and love ✨
+
+Thank you for being someone special ❤️
+
+Keep smiling 😊
+
+</p>
+
+<h3>
+🎊 The End 🎊
+</h3>
+
+</div>
+
+<script>
+
+const items=["❤️","💕","💖","🎊","✨","🌹"];
+
+for(let i=0;i<60;i++){
+
+let obj=document.createElement("div");
+
+obj.className="confetti";
+
+obj.innerHTML=
+items[Math.floor(Math.random()*items.length)];
+
+obj.style.left=Math.random()*100+"%";
+
+obj.style.animationDuration=
+(3+Math.random()*5)+"s";
+
+document.body.appendChild(obj);
+
+}
+
+</script>
+
+</body>
+</html>
